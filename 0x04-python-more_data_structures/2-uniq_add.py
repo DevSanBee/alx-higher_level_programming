@@ -6,5 +6,10 @@ def uniq_add(my_list=[]):
     (only once for each integer) with the prototype 
     def uniq_add(my_list=[]):
     """
-    new_list = set(my_list)
-    return sum(new_list)
+    new_list = []
+    sum = 0
+    for num in my_list:
+        if num not in new_list:
+            sum += num
+            new_list.append(num)
+    return sum
